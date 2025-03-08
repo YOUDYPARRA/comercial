@@ -1,0 +1,58 @@
+@extends('app')
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+            <div class="panel panel-default" ng-controller="catalogoCtrl">
+                
+                <div class='panel-heading'>DATOS DE CÁLCULO</div>
+                {!! Form::model(Request::all(),['route'=>'catalogos_calculo.index','method'=>'GET']) !!}
+                <div class="form-group label-floating has-info">
+                    <label class='control-label'><i class='material-icons'>create</i>SELECCIONE UN MODELO</label>
+                    {!! Form::select('modelo',['0'=>'Seleccione Opcion']+\DB::table('insumos')->where('bandera_insumo','=','E')->lists('modelo', 'modelo'),null,['class'=>'form-control','ng-model'=>'modelo','size'=>'1']) !!}
+                    <button type="submit" class="btn btn-info btn-lg" ><i class="material-icons">search</i>BUSCAR</button>
+                    <!--<input type="button" value="Agregar Nuevo" name="btn" ng-click="crearCatalogoCalculo()"/>-->
+                </div>
+                    {!! Form::close() !!}
+                    
+                    <%conf.headerCrear%>
+                    {!!$objetos->render()!!}
+                    <div class='panel-body'>
+                        <table border=0 class="table table-striped">
+                        <thead>
+    	                   <tr>
+    		                  <th>Id</th>	
+			                 <th>Modelo</th>	
+			                 <th>Usuario</th>	
+			                 <th>Fecha actualización</th>
+			                 </tr>
+		                  </thead>
+                        @foreach($objetos as $key=>$objeto)
+                            <tr>
+        	                   <td>{!! $objeto->id!!}</td>
+			                 <td>{!! $objeto->modelo!!}</td>	
+			                 <td>{!! $objeto->usuario!!}</td>	
+                            <td>{!! $objeto->updated_at!!}</td> 
+			                 <td>
+                                             
+                                                @can('acceso','catalogos_calculo.edit')
+                                                    <a href="{{ route('catalogos_calculo.edit', $objeto->id)}}" type="button" class="btn btn-primary"><i class="material-icons">cached</i></a> 			| 
+                                                @endcan                                                
+                                                @can('acceso','catalogos_calculo.destroy')
+                                                    <span type="button" class="btn btn-danger" ng-init="catalogo[{!!$key!!}]={!!$objeto->id!!}"  ng-click="elimina(catalogo[{!!$key!!}])"><i class="material-icons">delete</i> </span>
+                                                @endcan
+			                 </td>
+		                  </tr>
+                        @endforeach
+                    </table>
+
+                    </div>
+                    <div class="panel-footer"> 
+                        <a type="button" class="btn btn-raised btn btn-info" ng-click="crearCatalogoCalculo()" href=""><i class="material-icons">assignment</i> AGREGAR</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

@@ -1,0 +1,38 @@
+@extends('app')
+@section('content')
+<div class="container" >
+<div class="panel-heading">RECURSO</div>
+
+<p>TOTAL ELIMINADOS: {{ $objetos->total()}}</p>
+{!! $objetos->render() !!}
+
+	<div class="panel-body">
+		<table border="0" class="table table-striped table-condensed" ng-controller="recursoCtrl">
+						<thead>
+							<tr>
+								
+								<th>#</th>	
+								<th>RECURSO</td>	
+								<th>OBSERVACIÓN</th>	
+								<th>RESTAURAR</th>	
+							</tr>
+						</thead>
+							@foreach($objetos as $key=>$objeto)
+							<tr>
+								
+								<td>{!! $objeto->id!!}</td>	
+								<td>{!! $objeto->recurso!!}</td>	
+								<td>{!! $objeto->observacion!!}</td>	
+								<td>
+								<span type="button" class="btn btn-danger" ng-init="recurso[{{$key}}].id={{ $objeto->id }}"  ng-click="eliminar(recurso[{{$key}}])"><i class="material-icons">settings_backup_restore</i> </span> 
+								
+								</td>
+								<!-- <td>{!! $objeto->estado!!}</td> -->	
+							</tr>
+ 							@endforeach
+					</table>
+
+	</div>
+{!! $objetos->render() !!}
+</div>
+@endsection

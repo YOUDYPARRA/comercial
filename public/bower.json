@@ -1,0 +1,20 @@
+{
+  "name": "comercial",
+  "version": "0.0.0",
+  "description": "sistema para digitalizar procedimientos",
+  "authors": [
+    "Ing Sist. Edgar Mora Soto L.I. JONATHAN YOUDY PARRA"
+  ],
+  "license": "MIT",
+  "homepage": "comercial",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
+    "bootstrap-material-design": "~0.5.7",
+    "angular-scroll-glue": "~2.0.6",
+    "ng-scroll-glue": "~2.0.10",
+    "angularjs-datetime-picker": "~0.1.20",
+    "docxtemplater": "^3.0.0",
+    "jszip": "2"
+  }
+}

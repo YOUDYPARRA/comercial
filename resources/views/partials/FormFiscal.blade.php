@@ -1,0 +1,67 @@
+<div class="panel panel-info">
+  <div class="panel-heading"><i class="material-icons">note_add</i> DATOS CLIENTE. <span class="badge" ng-show="msg">Cargando ...</span></div>
+    <div class="panel-body">
+    <fieldset ng-disabled="esc_datosTercero">
+    <div class="row">
+        <div class='col-md-4'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.nombre_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> RAZON FISCAL</label>
+        {!! Form::text('nombre_fiscal',null,array('ng-model'=>'objeto.nombre_fiscal','class'=>'form-control','placeholder'=>'razon social','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.rfc.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> RFC</label>
+        {!! Form::text('rfc',null,array('ng-model'=>'objeto.rfc','class'=>'form-control','placeholder'=>'rfc','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-4'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.calle_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i>DIRECCION</label>
+        {!! Form::text('calle_fiscal',null,array('ng-model'=>'objeto.calle_fiscal','class'=>'form-control','placeholder'=>'calle','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.c_p_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i>CP.</label>
+        {!! Form::text('c_p_fiscal',null,array('ng-model'=>'objeto.c_p_fiscal','class'=>'form-control','placeholder'=>'c.p.','required')) !!}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-3'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.colonia_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> COLONIA</label>
+        {!! Form::text('colonia_fiscal',null,array('ng-model'=>'objeto.colonia_fiscal','class'=>'form-control','placeholder'=>'colonia','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-3'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.ciudad_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> CIUDAD</label>
+        {!! Form::text('ciudad_fiscal',null,array('ng-model'=>'objeto.ciudad_fiscal','class'=>'form-control','placeholder'=>'ciudad','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-3'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.estado_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> ESTADO</label>
+        {!! Form::text('estado_fiscal',null,array('ng-model'=>'objeto.estado_fiscal','class'=>'form-control','placeholder'=>'estado','required')) !!}
+            </div>
+        </div>
+        <div class='col-md-3'>
+            <div class="form-group has-info">
+            <span class="badge badge-warning" ng-show="formContratos.pais_fiscal.$error.required">*</span>
+            <label class='control-label'><i class='material-icons'></i> PAIS</label>
+        {!! Form::text('pais_fiscal',null,array('ng-model'=>'objeto.pais_fiscal','class'=>'form-control','placeholder'=>'pais','required')) !!}
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</div>
+</div>

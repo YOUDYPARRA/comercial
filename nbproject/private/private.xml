@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="8">
+        <file>
+            <url>resources/views/grupos/partials/Form.blade.php</url>
+            <bookmark id="7">
+                <name/>
+                <line>73</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>resources/views/contratos_compra_venta/index.blade.php</url>
+            <bookmark id="6">
+                <name/>
+                <line>48</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>resources/views/cotizaciones_paquetes_insumos/partials/Index.blade.php</url>
+            <bookmark id="8">
+                <name/>
+                <line>47</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>app/Http/Controllers/ContratoCompraVentaController.php</url>
+            <bookmark id="4">
+                <name/>
+                <line>42</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>app/Providers/AuthServiceProvider.php</url>
+            <bookmark id="3">
+                <name/>
+                <line>37</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>app/ContratoCompraVenta.php</url>
+            <bookmark id="5">
+                <name/>
+                <line>41</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Z:/comercial/app/Http/routes.php</file>
+        </group>
+    </open-files>
+</project-private>

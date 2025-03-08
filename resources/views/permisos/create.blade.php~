@@ -1,0 +1,19 @@
+@extends('app')
+@section('content') 
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-md-offset-0">
+			<div class="panel panel-default" ng-controller="permisoCtrl">
+				<div class='panel-heading'><%confPer.headerCrear%></div>
+    			<div class='panel-body'>
+        				@include('permisos.partials.Form')
+				</div>	
+				<div class="panel-footer"> 
+       				 <button type="submit" ng-click="guarda()" class="btn btn-raised btn-info btn-lg"><i class="material-icons">save</i><%confPer.successCrea%></button>
+    			</div>
+    		</div>
+        
+    	</div>
+    </div>
+</div>
+@endsection
